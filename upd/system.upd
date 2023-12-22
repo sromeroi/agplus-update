@@ -1,0 +1,122 @@
+# --- UPDATE AMIGAGAMES+ SYSTEM FILES ---
+
+# --- ACTUALIZAR FONDO DE ESCRITORIO ---
+
+COPY "files/wallpaper_install.iff" "%APPS%"
+
+# --- ACTUALIZAR BASE DE DATOS IGAME ---
+
+PRINT "> Actualizando iGame database..."
+DELETE "%APPS%/iGame/iGame/gameslist.csv"
+COPY "files/gameslist.csv" "%APPS%/iGame/iGame/"
+
+# --- ACTUALIZAR BASE DE DATOS DE TINYLAUNCHER ---
+
+PRINT "> Actualizando TinyLauncher database..."
+COPY_CONTENT "files/tinylauncher" "%WB%/S/TinyLauncher"
+
+# --- AMIGAGAMES NEW VER 1.9.3 ---
+
+DELETE "%WB%/Prefs/Env-Archive/MCP2"
+COPY "files/mcp/MCP2/" "%WB%/Prefs/Env-Archive/"
+COPY "files/s/Startup-Sequence" "%WB%/s"
+COPY "files/s/agplus/about.arexx" "%WB%/s/agplus"
+COPY "files/s/agplus/about.arexx.info" "%WB%/s/agplus"
+
+EXECUTE "protect sys:s/agplus/about.arexx +s"
+
+# --- AGREGAR PREFS ---
+
+#COPY "files/prefs/palette.prefs" "%WB%/Prefs/Env-Archive/Sys/"
+
+# --- AGREGAR IGAME 2.4.5 ---
+
+#PRINT "> Actualizando iGame 2.4.5..."
+#DELETE "%APPS%/iGame/iGame/iGame"
+#DELETE "%APPS%/iGame/iGame/iGame.guide"
+#DELETE "%APPS%/iGame/iGame/iGame.guide.info"
+#COPY_CONTENT "files/igame" "%APPS%/iGame/iGame/"
+#EXECUTE "protect dh2:iGame/iGame/iGame +e"
+#EXECUTE "protect dh2:iGame/iGame/iGame.info +e"
+
+# --- AGREGAR DEMOSCENE 2.4.5 ---
+
+#PRINT "> Actualizando Demoscene 2.4.5..."
+#DELETE_WITHOUT_ICON "%APPS%/demos/demoscene/demoscene"
+#COPY_CONTENT "demos/demoscene" "%APPS%/Demos/Demoscene/"
+#EXECUTE "protect dh2:Demos/Demoscene/demoscene +e"
+
+# --- ACTUALIZAR AQB 0.8.2 ---
+
+#PRINT "> Actualizando AQB 0.8.2..."
+#EXECUTE "Assign AQB: REMOVE"
+#DELETE "%APPS%/aqb"
+#DELETE "%APPS%/aqb.info"
+#COPY_CONTENT "files/aqb" "%APPS%"
+
+# --- ACTUALIZAR GOSHELL 4.0 ---
+
+#PRINT "> Actualizando GoShell 4.0..."
+#DELETE_CONTENT "%APPS%/GoShell"
+#DELETE_CONTENT "%APPS%/goshell"
+#COPY_CONTENT "files/goshell" "%APPS%/goshell"
+#COPY "files/prefs/GoShell.conf" "%WB%/Prefs/Env-Archive"
+#EXECUTE "protect dh2:goshell/GoShell.info +e"
+#COPY "files/goshell.info" "%APPS%"
+
+# --- AGREGAR REDPILL 0.9.31 ---
+
+PRINT "> Actualizando RedPill 0.9.31..."
+DELETE "%APPS%/redpill"
+DELETE "%APPS%/redpill.info"
+COPY "files/redpill" "%APPS%"
+COPY "files/redpill.info" "%APPS%"
+
+# --- AGREGAR HIPPOPLAYER 2.59 ---
+
+PRINT "> Actualizando HippoPlayer 2.59..."
+COPY_CONTENT "files/hippoplayer" "%APPS%/HippoPlayer"
+EXECUTE "copy dh2:Hippoplayer/Hippoplayer.group dh0:S/"
+
+# --- AGREGAR TOOLSDAEMON ---
+
+COPY "files/ToolsDaemon.menu" "%WB%/S"
+COPY "files/ToolsDaemon.menu.info" "%WB%/S"
+DELETE "%WB%/S/ToolsDaemon.menu_bak"
+
+# --- AGREGAR SISTEMA COMPACT FLASH ---
+
+PRINT "> Agregando Sistema de tarjetas Compact Flash..."
+COPY_CONTENT "files/cf/c" "%WB%/C"
+COPY_CONTENT "files/cf/Devs/DosDrivers" "%WB%/Devs/DOSDrivers"
+
+# --- ACTUALIZAR LIBRERIAS ---
+
+PRINT "> Actualizando playsid.library 1.6..."
+#PRINT "> Agregando identify.library 43.2..."
+#PRINT "> Agregando httpclient.library 4.1..."
+COPY_CONTENT "files/libs" "%WB%/libs/"
+
+# --- AGREGAR COMANDOS ---
+
+PRINT "> Agregando vgm2wav 1.0..."
+PRINT "> Agregando mdx2wav 1.0..."
+#PRINT "> Actualizando WHDLoad 19.0.6626..."
+##PRINT "> Actualizando RawDIC 6.1..."
+COPY_CONTENT "files/c" "%WB%/c"
+#EXECUTE "protect c:KillPlanarImages +e"
+
+# --- ACTUALIZAR POSICIÓM DE ICONOS ---
+
+#COPY "files/icons/demoscene.info" "%APPS%/Demos/DemoScene"
+
+# --- ACTUALIZAR GUI ---
+
+#COPY "files/prefs/IGAME.1.cfg" "%WB%/Prefs/Env-Archive/mui/"
+#COPY "files/prefs/IGAME.1.prefs" "%WB%/Prefs/Env-Archive/mui/"
+#COPY "files/prefs/IGAME.2.cfg" "%WB%/Prefs/Env-Archive/mui/"
+#COPY "files/prefs/IGAME.2.prefs" "%WB%/Prefs/Env-Archive/mui/"
+
+#COPY "files/prefs/igame.prefs" "%APPS%/iGame/iGame/"
+#COPY "files/prefs/igame.prefs" "%APPS%/Demos/DemoScene/"
+#COPY "files/desktop/demoscene.info" "%APPS%/Demos/DemoScene/"

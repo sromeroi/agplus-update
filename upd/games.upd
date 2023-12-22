@@ -1,0 +1,57 @@
+# --- UPDATE AMIGAGAMES+ WHDLOAD GAMES ---
+
+# ----------------------------- Games 1.9.3 ------------------------------------------
+
+PRINT "> Agregando Alien Legion version 1.01 (26.11.2023)..."
+DELETE "%OCS%/A/AlienLegion"
+MKDIR "%OCS%/A/AlienLegion"
+COPY_CONTENT "games/AlienLegion" "%OCS%/A/AlienLegion"
+COPY "games/AlienLegion.info" "%OCS%/A/"
+
+PRINT "> Agregando Campaign version 1.2 (25.11.2023)..."
+DELETE "%OCS%/C/Campaign"
+MKDIR "%OCS%/C/Campaign"
+COPY_CONTENT "games/Campaign" "%OCS%/C/Campaign"
+COPY "games/Campaign.info" "%OCS%/C/"
+
+PRINT "> Agregando Traders version 1.21 (26.11.2023)..."
+DELETE "%OCS%/T/TradersNTSC"
+MKDIR "%OCS%/T/TradersNTSC"
+COPY_CONTENT "games/TradersNTSC" "%OCS%/T/TradersNTSC"
+COPY "games/TradersNTSC.info" "%OCS%/T/"
+
+PRINT "> Agregando Time Bandit version 1.1 (26.11.2023)..."
+DELETE "%OCS%/T/TimeBandit"
+MKDIR "%OCS%/T/TimeBandit"
+COPY_CONTENT "games/TimeBandit" "%OCS%/T/TimeBandit"
+COPY "games/TimeBandit.info" "%OCS%/T/"
+
+PRINT "> Agregando Hellrun Machine version 2.0 (29.11.2023)..."
+DELETE "%OCS%/H/HellrunMachine"
+MKDIR "%OCS%/H/HellrunMachine"
+COPY_CONTENT "games/HellrunMachine" "%OCS%/H/HellrunMachine"
+COPY "games/HellrunMachine.info" "%OCS%/H/"
+
+PRINT "> Agregando Wings of Death version 1.03 (30.11.2023)..."
+DELETE "%OCS%/W/WingsOfDeath"
+MKDIR "%OCS%/W/WingsOfDeath"
+COPY_CONTENT "games/WingsOfDeath" "%OCS%/W/WingsOfDeath"
+COPY "games/WingsOfDeath.info" "%OCS%/W/"
+
+PRINT "> Agregando Super Hang-On version 1.7 (21.11.2023)..."
+DELETE "%OCS%/S/Sp-Sy/SuperHangOn"
+MKDIR "%OCS%/S/Sp-Sy/SuperHangOn"
+COPY_CONTENT "games/SuperHangOn" "%OCS%/S/Sp-Sy/SuperHangOn"
+COPY "games/SuperHangOn.info" "%OCS%/S/Sp-Sy/"
+
+PRINT "> Agregando S.D.I. version 1.1 (30.11.2023)..."
+DELETE "%OCS%/S/Sa-So/SDICinemaware"
+MKDIR "%OCS%/S/Sa-So/SDICinemaware"
+COPY_CONTENT "games/SDICinemaware" "%OCS%/S/Sa-So/SDICinemaware"
+COPY "games/SDICinemaware.info" "%OCS%/S/Sa-So/"
+
+PRINT "> Agregando Foundation's Waste version 1.2 (02.12.2023)..."
+DELETE "%OCS%/F/FoundationsWaste"
+MKDIR "%OCS%/F/FoundationsWaste"
+COPY_CONTENT "games/FoundationsWaste" "%OCS%/F/FoundationsWaste"
+COPY "games/FoundationsWaste.info" "%OCS%/F/"

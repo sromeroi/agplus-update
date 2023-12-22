@@ -1,0 +1,29 @@
+
+# --- UPDATE amigagames+ ---
+
+PRINT "%CR%-- ------------------------------------------------- --"
+PRINT "-- Actualizacion de 'amigagames+' a la version 1.9.3 --"
+PRINT "-- ------------------------------------------------- --%CR%"
+
+PRINT ">> Este programa actualizara juegos y ficheros del sistema.%CR%"
+CONFIRM_BEGIN ">> Quieres continuar? (s/n)" "n" "s"
+    PRINT "%CR%>> Actualizacion abortada!"
+    END
+CONFIRM_END
+PRINT "%CR%"
+
+#-- Ficheros a actualizar ---
+
+INCLUDE "upd/system.upd"
+
+INCLUDE "upd/games.upd"
+
+INCLUDE "upd/demos.upd"
+
+#--- Reiniciar ---
+PRINT "%CR%Es necesario reiniciar para aplicar algunos de los cambios realizados.%CR%"
+CONFIRM_BEGIN "Quieres reiniciar ahora? (s/n)" "s" "n"
+    EXECUTE "c:ColdReboot >NIL:"
+CONFIRM_END
+
+END

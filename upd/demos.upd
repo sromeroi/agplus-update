@@ -1,0 +1,12 @@
+# --- UPDATE AMIGAGAMES+ DEMOS ---
+
+# --- Actualizar Base de Datos Demos ---
+
+COPY "demos/gameslist.csv" "%APPS%/Demos/DemoScene/"
+
+# --- new demos
+
+PRINT "> Agregando Mind of Traces 1.00 (12.03.2023)..."
+DELETE "%APPS%/Demos/M/MindOfTraces"
+MKDIR "%APPS%/Demos/M/MindOfTraces"
+COPY_CONTENT "demos/MindOfTraces" "%APPS%/Demos/M/MindOfTraces"
